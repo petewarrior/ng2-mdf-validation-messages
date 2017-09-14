@@ -7,13 +7,13 @@
     "ng2 validation messages",
     "angular 2 validation messages"
   ],
-  "version": "0.1.5",
+  "version": "0.2.0",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
     "start": "rimraf demo-app/node_modules/ng2-mdf-validation-messages && tsc -w --outDir demo-app/node_modules/ng2-mdf-validation-messages",
     "lint": "tslint src/**/*.ts",
-    "build.prod": "npm run lint && npm run test && rimraf dist && tsc --outDir dist",
+    "build.prod": "npm run lint && rimraf dist && tsc --outDir dist",
     "test": "karma start",
     "postinstall": "typings install"
   },
@@ -25,12 +25,12 @@
   "author": "Dimitar Kostov",
   "license": "MIT",
   "devDependencies": {
-    "@angular/common": "2.1.2",
-    "@angular/compiler": "2.1.2",
-    "@angular/core": "2.1.2",
-    "@angular/forms": "2.1.2",
-    "@angular/platform-browser": "2.1.2",
-    "@angular/platform-browser-dynamic": "2.1.2",
+    "@angular/common": "~4.1",
+    "@angular/compiler": "~4.1",
+    "@angular/core": "~4.1",
+    "@angular/forms": "~4.1",
+    "@angular/platform-browser": "~4.1",
+    "@angular/platform-browser-dynamic": "~4.1",
     "awesome-typescript-loader": "2.2.4",
     "core-js": "2.4.1",
     "jasmine-core": "2.5.2",
@@ -43,12 +43,12 @@
     "phantomjs-prebuilt": "2.1.13",
     "reflect-metadata": "0.1.8",
     "rimraf": "2.5.4",
-    "rxjs": "5.0.0-rc.1",
+    "rxjs": "^5.0.1",
     "tslint": "3.15.1",
-    "typescript": "2.0.6",
-    "typings": "1.5.0",
-    "webpack": "2.1.0-beta.22",
-    "webpack-dev-server": "2.1.0-beta.2",
-    "zone.js": "0.6.26"
+    "typescript": "2.2.1",
+    "typings": "^1.5.0",
+    "webpack": "^2.0.0",
+    "webpack-dev-server": "^2.0.0",
+    "zone.js": "^0.8.4"
   }
 }

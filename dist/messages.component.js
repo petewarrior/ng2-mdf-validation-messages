@@ -10,10 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var core_1 = require('@angular/core');
-var forms_1 = require('@angular/forms');
-var config_1 = require('./config');
-var message_provider_1 = require('./message-provider');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
+var config_1 = require("./config");
+var message_provider_1 = require("./message-provider");
 var ValidationMessageComponent = (function () {
     function ValidationMessageComponent(customConfig) {
         this.customConfig = customConfig;
@@ -21,7 +22,8 @@ var ValidationMessageComponent = (function () {
         if (customConfig) {
             this.config = Object.assign({}, config_1.defaultConfig, customConfig);
         }
-        this.messageProvider = new message_provider_1.MessageProvider(this.config.defaultErrorMessages);
+        var errorMessages = Object.assign({}, config_1.defaultConfig.defaultErrorMessages, this.config.defaultErrorMessages);
+        this.messageProvider = new message_provider_1.MessageProvider(errorMessages);
     }
     ValidationMessageComponent.prototype.ngOnInit = function () {
         this._mergeWithLocalConfiguration();
@@ -44,23 +46,23 @@ var ValidationMessageComponent = (function () {
             this.config.class = this.class;
         }
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', forms_1.AbstractControl)
-    ], ValidationMessageComponent.prototype, "control", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], ValidationMessageComponent.prototype, "class", void 0);
-    ValidationMessageComponent = __decorate([
-        core_1.Component({
-            selector: 'ng2-mdf-validation-message',
-            template: '<span *ngIf="errorMessage !== null" [class]="config.class">{{errorMessage}}</span>'
-        }),
-        __param(0, core_1.Optional()), 
-        __metadata('design:paramtypes', [config_1.ValidationMessagesConfiguration])
-    ], ValidationMessageComponent);
     return ValidationMessageComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", forms_1.AbstractControl)
+], ValidationMessageComponent.prototype, "control", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], ValidationMessageComponent.prototype, "class", void 0);
+ValidationMessageComponent = __decorate([
+    core_1.Component({
+        selector: 'ng2-mdf-validation-message',
+        template: '<span *ngIf="errorMessage !== null" [class]="config.class">{{errorMessage}}</span>'
+    }),
+    __param(0, core_1.Optional()),
+    __metadata("design:paramtypes", [config_1.ValidationMessagesConfiguration])
+], ValidationMessageComponent);
 exports.ValidationMessageComponent = ValidationMessageComponent;
 //# sourceMappingURL=messages.component.js.map

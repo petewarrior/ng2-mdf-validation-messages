@@ -44,7 +44,7 @@ export declare class ValidationExtensions {
      * @param pattern The required pattern.
      * @param message Custom error message that will be shown to the user.
      */
-    static pattern(pattern: string, message?: string): ValidatorFn;
+    static pattern(pattern: string | RegExp, message?: string): ValidatorFn;
     /**
      * Requires the input length to be between specific range.
      * @param min Required minimum length.

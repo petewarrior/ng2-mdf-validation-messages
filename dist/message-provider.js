@@ -1,3 +1,4 @@
+Object.defineProperty(exports, "__esModule", { value: true });
 var MessageProvider = (function () {
     function MessageProvider(defaultMessages) {
         this.defaultMessages = defaultMessages;
